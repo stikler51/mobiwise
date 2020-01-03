@@ -635,7 +635,7 @@
     line-height: 24px; } }
 body {
   margin: 0;
-  width: 100vw;
+  max-width: 100% !important;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden; }
   body.opened-modal {
