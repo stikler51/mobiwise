@@ -87,7 +87,7 @@
 .block.intro .container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   position: relative; }
   .block.intro .container .left-part {
     padding: 117px 0 140px 0;
@@ -98,9 +98,9 @@
       max-width: 75%;
       margin-bottom: 64px; }
   .block.intro .container .right-part {
-    position: absolute;
-    top: 0;
-    right: 0; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .block.intro .container .right-part img {
       width: 100%;
       height: auto; }
@@ -125,7 +125,7 @@
   .block.who-uses .cards-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: flex-start; }
 .block.how-it-works {
   padding: 60px 0 10px 0;
   background: rgba(0, 87, 255, 0.04); }
@@ -725,7 +725,7 @@ body {
   border-radius: 50%;
   background: #0057FF; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
   .container {
     padding: 0 24px; }
 

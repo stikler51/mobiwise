@@ -5,7 +5,7 @@
     .container {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: stretch;
       position: relative;
 
       .left-part {
@@ -22,9 +22,12 @@
       }
 
       .right-part {
-        position: absolute;
-        top: 0;
-        right: 0;
+        //position: absolute;
+        //top: 0;
+        //right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
           width: 100%;
@@ -68,7 +71,7 @@
     .cards-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
     }
   }
 
