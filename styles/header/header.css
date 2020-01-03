@@ -1,0 +1,9 @@
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.header .logo {
+  height: 60px;
+  width: auto; }
+
+/*# sourceMappingURL=header.css.map */
