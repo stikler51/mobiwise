@@ -2,14 +2,32 @@ window.addEventListener('load', () => {
   if (document.body.querySelector('.more')) {
     modalHandler();
   }
+
+  if (window.innerWidth < 991) {
+    rebuildTestimonialCard();
+  }
   scrollToAnchor();
   mobileMenu();
-
-
 });
 
 $(document).ready(function(){
   spoilerHandler();
+
+  $('.tariffs').slick({
+    dots: true,
+    infinite: true,
+    arrows: false,
+    respondTo: 'min',
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '30px',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: 'unslick'
+      }
+    ]
+  });
 });
 
 function modalHandler() {
@@ -18,6 +36,7 @@ function modalHandler() {
   modalBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      console.log('yo');
 
       document.body.classList.toggle('opened-modal');
       let modalID = btn.getAttribute('data-target');
@@ -29,7 +48,17 @@ function modalHandler() {
         slidesToShow: 2,
         slidesToScroll: 1,
         prevArrow: '.opened .custom-prev',
-        nextArrow: '.opened .custom-next'
+        nextArrow: '.opened .custom-next',
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 1,
+              arrows: false,
+              dots: true
+            }
+          }
+        ]
       });
     })
   });
@@ -77,4 +106,14 @@ function mobileMenu() {
   menuBtn.addEventListener('click', () => {
     $('.navigation').slideToggle();
   })
+}
+
+function rebuildTestimonialCard() {
+  let testimonialCards = document.body.querySelectorAll('.testimonial-card');
+  if (testimonialCards.length) {
+    testimonialCards.forEach( block => {
+      let social = block.querySelector('.social-links');
+      block.appendChild(social);
+    })
+  }
 }

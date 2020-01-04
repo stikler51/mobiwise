@@ -133,7 +133,8 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #0057FF;
+  background: #0057FF url("../images/chat.png") no-repeat center center;
+  background-size: 24px 24px;
 }
 
 @media screen and(max-width: 1024px) {
@@ -158,6 +159,14 @@ body {
 
   .blinger-btn {
     display: block;
+  }
+
+  .slider-container {
+    padding: 0;
+  }
+
+  .slider-arrows {
+    display: none;
   }
 }
 

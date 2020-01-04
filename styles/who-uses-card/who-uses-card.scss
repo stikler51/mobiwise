@@ -62,7 +62,7 @@
 
     .card-img {
       img {
-        width: 80vw;
+        width: 60vw;
       }
     }
 
@@ -78,6 +78,16 @@
 
     &:last-child {
       padding-right: 24px;
+    }
+  }
+}
+
+@media screen and(max-width: 550px) {
+  .who-uses-card {
+    .card-img {
+      img {
+        width: 80vw;
+      }
     }
   }
 }
