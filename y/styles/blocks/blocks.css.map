@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,YAAQ;EACN,OAAO,EAAE,eAAe;EAExB,wBAAY;IACV,SAAS,EAAE,GAAG;IACd,aAAa,EAAE,IAAI;EAGrB,0BAAc;IACZ,SAAS,EAAE,GAAG;IACd,aAAa,EAAE,IAAI",
+"sources": ["blocks.scss"],
+"names": [],
+"file": "blocks.css"
+}

@@ -53,6 +53,7 @@
 @media screen and(max-width: 991px) {
   .who-uses-card {
     width: 100%;
+    margin-right: 24px;
 
     .card-title {
       font-size: 18px;
@@ -60,11 +61,11 @@
       margin: 8px 0;
     }
 
-    .card-img {
-      img {
-        width: 60vw;
-      }
-    }
+    //.card-img {
+    //  img {
+    //    width: 60vw;
+    //  }
+    //}
 
     .more {
       opacity: 1;
@@ -72,22 +73,22 @@
       line-height: 24px;
     }
 
-    &:first-child {
-      padding-left: 24px;
-    }
-
-    &:last-child {
-      padding-right: 24px;
-    }
+    //&:first-child {
+    //  padding-left: 24px;
+    //}
+    //
+    //&:last-child {
+    //  padding-right: 24px;
+    //}
   }
 }
 
-@media screen and(max-width: 550px) {
-  .who-uses-card {
-    .card-img {
-      img {
-        width: 80vw;
-      }
-    }
-  }
-}
+//@media screen and(max-width: 550px) {
+//  .who-uses-card {
+//    .card-img {
+//      img {
+//        width: 80vw;
+//      }
+//    }
+//  }
+//}
