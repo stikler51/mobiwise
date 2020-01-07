@@ -66,17 +66,17 @@
     .row {
       flex-direction: column;
       width: 100%;
-      margin: 0 24px;
+      margin: 0 24px 0 12px;
       justify-content: space-between;
 
       &:first-child {
-        padding-left: 24px;
-        margin: 0;
+        //padding-left: 24px;
+        margin-left: 0;
       }
 
       &:last-child {
-        padding-right: 24px;
-        margin: 0;
+        //padding-right: 24px;
+        margin-right: 0;
       }
 
       &:nth-child(2n) {
@@ -119,23 +119,23 @@
 
         }
 
-        img {
-          width: 60vw;
-        }
+        //img {
+        //  width: 60vw;
+        //}
       }
     }
   }
 }
 
-@media screen and(max-width: 550px) {
-  .steps {
-    .row {
-      .cell {
-        img {
-          width: 80vw;
-        }
-
-      }
-    }
-  }
-}
+//@media screen and(max-width: 550px) {
+//  .steps {
+//    .row {
+//      .cell {
+//        img {
+//          width: 80vw;
+//        }
+//
+//      }
+//    }
+//  }
+//}

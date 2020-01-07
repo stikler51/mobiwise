@@ -1,7 +1,5 @@
 window.addEventListener('load', () => {
-  if (document.body.querySelector('.more')) {
-    modalHandler();
-  }
+  modalHandler();
 
   if (window.innerWidth < 991) {
     rebuildTestimonialCard();
@@ -105,6 +103,17 @@ function modalHandler() {
       document.body.querySelector('.modal-bg.opened').classList.toggle('opened');
     })
   })
+
+  let modalContact = document.body.querySelectorAll('.blue-btn');
+
+  modalContact.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('opened-modal');
+      let modal = document.body.querySelector('#modal-contact-us');
+      modal.classList.toggle('opened');
+    })
+  });
 }
 
 function scrollToAnchor() {

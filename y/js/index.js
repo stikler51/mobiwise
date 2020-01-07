@@ -5,6 +5,7 @@ window.addEventListener('load', () => {
 
   if (window.innerWidth < 991) {
     rebuildTestimonialCard();
+    fixStepsHeight();
   }
   scrollToAnchor();
   mobileMenu();
@@ -28,6 +29,40 @@ $(document).ready(function(){
       }
     ]
   });
+
+  $('.cards-container').slick({
+    dots: false,
+    infinite: false,
+    arrows: false,
+    respondTo: 'min',
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '30px',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: 'unslick'
+      }
+    ]
+  });
+
+  $('.steps').slick({
+    dots: false,
+    infinite: false,
+    arrows: false,
+    respondTo: 'min',
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '30px',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: 'unslick'
+      }
+    ]
+  });
+
+
 });
 
 function modalHandler() {
@@ -36,7 +71,6 @@ function modalHandler() {
   modalBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log('yo');
 
       document.body.classList.toggle('opened-modal');
       let modalID = btn.getAttribute('data-target');
@@ -116,4 +150,20 @@ function rebuildTestimonialCard() {
       block.appendChild(social);
     })
   }
+}
+
+function fixStepsHeight() {
+  let steps = document.body.querySelectorAll('.steps .row');
+  let maxHeight = 0;
+  steps.forEach(el => {
+    let elHeight = el.offsetHeight;
+
+    if (elHeight > maxHeight) {
+      maxHeight = elHeight;
+    }
+  })
+
+  steps.forEach(el => {
+    el.style.height = `${maxHeight}px`;
+  })
 }

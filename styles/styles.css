@@ -224,7 +224,9 @@
     background: #101417 url("../images/black-mob-bg.png") no-repeat center center;
     background-size: cover; }
     .block.black-block.clear {
-      display: none; }
+      padding: 32px 0; }
+      .block.black-block.clear .block-title {
+        display: none; }
     .block.black-block .container .block-title {
       margin: 0; }
     .block.black-block .container .regular-text {
@@ -402,7 +404,8 @@
   background: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 8000; }
   .modal-bg.opened {
     display: flex; }
   .modal-bg:hover {
@@ -413,6 +416,64 @@
     border-radius: 8px;
     padding-top: 56px;
     position: relative; }
+    .modal-bg .modal.contact {
+      padding: 56px;
+      width: auto; }
+      .modal-bg .modal.contact .modal-title {
+        padding: 0;
+        margin: 0;
+        font-size: 32px;
+        line-height: 64px;
+        text-align: center; }
+      .modal-bg .modal.contact .messengers {
+        display: flex;
+        justify-content: center;
+        margin: 24px 0 56px 0; }
+        .modal-bg .modal.contact .messengers a {
+          margin: 0 20px; }
+          .modal-bg .modal.contact .messengers a img {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            opacity: 1;
+            transition: 0.3s; }
+            .modal-bg .modal.contact .messengers a img:hover {
+              opacity: 0.6; }
+      .modal-bg .modal.contact .regular-text {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 32px;
+        padding: 0;
+        text-align: center; }
+      .modal-bg .modal.contact .contact-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .modal-bg .modal.contact .contact-form .contact-form-input {
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-sizing: border-box;
+          border-radius: 8px;
+          padding: 16px 26px;
+          color: rgba(0, 0, 0, 0.64);
+          font-size: 14px;
+          line-height: 24px;
+          outline: none;
+          margin-right: 16px;
+          flex-grow: 1; }
+        .modal-bg .modal.contact .contact-form .contact-form-submit {
+          padding: 16px 56px;
+          font-size: 14px;
+          line-height: 24px;
+          text-align: center;
+          color: white;
+          background: #0057FF;
+          border-radius: 8px;
+          border: 1px solid #0057FF;
+          transition: 0.3s; }
+          .modal-bg .modal.contact .contact-form .contact-form-submit:hover {
+            background: #0035a0;
+            border: 1px solid #0035a0;
+            cursor: pointer; }
     .modal-bg .modal .modal-title {
       font-style: normal;
       font-weight: bold;
@@ -452,6 +513,35 @@
       width: 90%;
       padding-top: 24px;
       margin-top: 80px; }
+      .modal-bg .modal.contact {
+        width: 80%;
+        padding: 24px; }
+        .modal-bg .modal.contact .modal-title {
+          font-size: 24px;
+          line-height: 32px; }
+        .modal-bg .modal.contact .messengers {
+          margin: 24px 0 33px 0; }
+          .modal-bg .modal.contact .messengers a {
+            margin: 0 10px; }
+            .modal-bg .modal.contact .messengers a img {
+              width: 56px;
+              height: 56px; }
+            .modal-bg .modal.contact .messengers a:first-child {
+              margin-left: 0; }
+            .modal-bg .modal.contact .messengers a:last-child {
+              margin-right: 0; }
+        .modal-bg .modal.contact .regular-text {
+          display: block;
+          font-size: 16px;
+          line-height: 24px; }
+        .modal-bg .modal.contact .contact-form {
+          flex-wrap: wrap; }
+          .modal-bg .modal.contact .contact-form .contact-form-input {
+            margin: 0;
+            width: 100%; }
+          .modal-bg .modal.contact .contact-form .contact-form-submit {
+            width: 100%;
+            margin-top: 16px; }
       .modal-bg .modal .modal-title {
         font-size: 28px;
         line-height: 40px;
@@ -705,6 +795,8 @@ body {
     overflow: hidden; }
     body.opened-modal .container {
       padding-right: 97px; }
+    body.opened-modal .steps {
+      z-index: -20; }
 
 .container {
   max-width: 1440px;
@@ -790,6 +882,11 @@ body {
   background-size: 24px 24px; }
 
 @media screen and (max-width: 1024px) {
+  body.opened-modal .header .container .navigation {
+    z-index: 1; }
+  body.opened-modal .container {
+    padding-right: 24px; }
+
   .container {
     padding: 0 24px; }
 

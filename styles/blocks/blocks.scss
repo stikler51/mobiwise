@@ -200,7 +200,10 @@
       background-size: cover;
 
       &.clear {
-        display: none;
+        padding: 32px 0;
+        .block-title {
+          display: none;
+        }
       }
 
       .container {

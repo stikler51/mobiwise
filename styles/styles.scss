@@ -22,6 +22,10 @@ body {
       padding-right: 97px;
     }
 
+    .steps {
+      z-index: -20;
+    }
+
   }
 }
 
@@ -138,6 +142,22 @@ body {
 }
 
 @media screen and(max-width: 1024px) {
+  body {
+    &.opened-modal {
+      .header {
+        .container {
+          .navigation {
+            z-index: 1;
+          }
+        }
+
+      }
+      .container {
+        padding-right: 24px;
+      }
+    }
+  }
+
   .container {
     padding: 0 24px;
   }

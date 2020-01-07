@@ -9,6 +9,7 @@
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 8000;
   &.opened {
     display: flex;
   }
@@ -24,7 +25,85 @@
     border-radius: 8px;
     padding-top: 56px;
     position: relative;
+    //z-index: 8000;
     //padding: 56px 56px 40px;
+
+    &.contact {
+      padding: 56px;
+      width: auto;
+
+      .modal-title {
+        padding: 0;
+        margin: 0;
+        font-size: 32px;
+        line-height: 64px;
+        text-align: center;
+      }
+
+      .messengers {
+        display: flex;
+        justify-content: center;
+        margin: 24px 0 56px 0;
+        a {
+          margin: 0 20px;
+          img {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            opacity: 1;
+            transition: 0.3s;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      .regular-text {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 32px;
+        padding: 0;
+        text-align: center;
+      }
+
+      .contact-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .contact-form-input {
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-sizing: border-box;
+          border-radius: 8px;
+          padding: 16px 26px;
+          color: rgba(0, 0, 0, 0.64);
+          font-size: 14px;
+          line-height: 24px;
+          outline: none;
+          margin-right: 16px;
+          flex-grow: 1;
+        }
+
+        .contact-form-submit {
+          padding: 16px 56px;
+          font-size: 14px;
+          line-height: 24px;
+          text-align: center;
+          color: white;
+          background: #0057FF;
+          border-radius: 8px;
+          border: 1px solid #0057FF;
+          transition: 0.3s;
+
+          &:hover {
+            background: #0035a0;
+            border: 1px solid #0035a0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
 
     .modal-title {
       font-style: normal;
@@ -75,6 +154,57 @@
       width: 90%;
       padding-top: 24px;
       margin-top: 80px;
+
+      &.contact {
+        width: 80%;
+        padding: 24px;
+
+        .modal-title {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        .messengers {
+          margin: 24px 0 33px 0;
+          a {
+            margin:0 10px;
+
+            img {
+              width: 56px;
+              height: 56px;
+            }
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        .regular-text {
+          display: block;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .contact-form {
+          flex-wrap: wrap;
+
+          .contact-form-input {
+            margin: 0;
+            width: 100%;
+          }
+
+          .contact-form-submit {
+            width: 100%;
+            margin-top: 16px
+          }
+        }
+      }
+
       .modal-title {
         font-size: 28px;
         line-height: 40px;
