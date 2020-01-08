@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
-  if (document.body.querySelector('.more')) {
-    modalHandler();
-  }
+  modalHandler();
+
 
   if (window.innerWidth < 991) {
     rebuildTestimonialCard();
@@ -66,13 +65,19 @@ $(document).ready(function(){
 });
 
 function modalHandler() {
+  let addPadding = getScrollbarWidth();
+  let containers = document.body.querySelectorAll('.container');
+
   let modalBtns = document.body.querySelectorAll('.more');
 
   modalBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-
       document.body.classList.toggle('opened-modal');
+      containers.forEach(container => {
+        let padd = parseInt(getComputedStyle(container).paddingRight, 10);
+        container.style.paddingRight = `${padd + addPadding}px`;
+      });
       let modalID = btn.getAttribute('data-target');
       let modal = document.getElementById(modalID);
       modal.classList.toggle('opened');
@@ -101,10 +106,29 @@ function modalHandler() {
 
   closeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      containers.forEach(container => {
+        let padd = parseInt(getComputedStyle(container).paddingRight, 10);
+        container.style.paddingRight = `${padd - addPadding}px`;
+      });
       document.body.classList.toggle('opened-modal');
       document.body.querySelector('.modal-bg.opened').classList.toggle('opened');
     })
-  })
+  });
+
+  let modalContact = document.body.querySelectorAll('.blue-btn');
+
+  modalContact.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('opened-modal');
+      containers.forEach(container => {
+        let padd = parseInt(getComputedStyle(container).paddingRight, 10);
+        container.style.paddingRight = `${padd + addPadding}px`;
+      });
+      let modal = document.body.querySelector('#modal-contact-us');
+      modal.classList.toggle('opened');
+    })
+  });
 }
 
 function scrollToAnchor() {
@@ -166,4 +190,8 @@ function fixStepsHeight() {
   steps.forEach(el => {
     el.style.height = `${maxHeight}px`;
   })
+}
+
+function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
 }

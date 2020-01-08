@@ -1,6 +1,7 @@
 .who-uses-card {
   margin: 0 12px;
   width: calc(33% - 24px);
+  outline: none;
   .card-img {
     //max-height: 250px;
     width: 100%;
@@ -32,6 +33,7 @@
     color: rgba(16, 20, 23, 0.56);
     transition: 0.3s;
     opacity: 0;
+    outline: none;
   }
 
   &:hover {

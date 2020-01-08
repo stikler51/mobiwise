@@ -112,7 +112,7 @@
       width: 100%;
       height: auto; }
 .block.black-block {
-  background: #101417 url("../images/black-bg.png") no-repeat center center;
+  background: #101417 url("../images/black-bg.svg") no-repeat center center;
   background-size: cover;
   padding: 70px 0;
   text-align: center; }
@@ -271,7 +271,8 @@
     background-size: contain; } }
 .who-uses-card {
   margin: 0 12px;
-  width: calc(33% - 24px); }
+  width: calc(33% - 24px);
+  outline: none; }
   .who-uses-card .card-img {
     width: 100%; }
     .who-uses-card .card-img img {
@@ -293,7 +294,8 @@
     line-height: 24px;
     color: rgba(16, 20, 23, 0.56);
     transition: 0.3s;
-    opacity: 0; }
+    opacity: 0;
+    outline: none; }
   .who-uses-card:hover {
     cursor: pointer; }
     .who-uses-card:hover .more {
@@ -318,7 +320,8 @@
 .steps .row {
   display: flex;
   justify-content: flex-start;
-  align-items: center; }
+  align-items: center;
+  outline: none; }
   .steps .row:nth-child(2n) .cell:nth-child(2) {
     padding-left: 64px;
     box-sizing: border-box; }
@@ -459,7 +462,9 @@
           line-height: 24px;
           outline: none;
           margin-right: 16px;
-          flex-grow: 1; }
+          flex-grow: 1;
+          font-style: normal;
+          font-weight: bold; }
         .modal-bg .modal.contact .contact-form .contact-form-submit {
           padding: 16px 56px;
           font-size: 14px;
@@ -469,7 +474,9 @@
           background: #0057FF;
           border-radius: 8px;
           border: 1px solid #0057FF;
-          transition: 0.3s; }
+          transition: 0.3s;
+          font-style: normal;
+          font-weight: bold; }
           .modal-bg .modal.contact .contact-form .contact-form-submit:hover {
             background: #0035a0;
             border: 1px solid #0035a0;
@@ -793,8 +800,6 @@ body {
   overflow-x: hidden; }
   body.opened-modal {
     overflow: hidden; }
-    body.opened-modal .container {
-      padding-right: 97px; }
     body.opened-modal .steps {
       z-index: -20; }
 
@@ -884,8 +889,6 @@ body {
 @media screen and (max-width: 1024px) {
   body.opened-modal .header .container .navigation {
     z-index: 1; }
-  body.opened-modal .container {
-    padding-right: 24px; }
 
   .container {
     padding: 0 24px; }

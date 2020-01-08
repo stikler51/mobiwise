@@ -18,9 +18,9 @@ body {
   &.opened-modal {
     overflow: hidden;
 
-    .container {
-      padding-right: 97px;
-    }
+    //.container {
+    //  padding-right: 97px;
+    //}
 
     .steps {
       z-index: -20;
@@ -152,9 +152,9 @@ body {
         }
 
       }
-      .container {
-        padding-right: 24px;
-      }
+      //.container {
+      //  padding-right: 24px;
+      //}
     }
   }
 

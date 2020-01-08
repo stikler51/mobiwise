@@ -83,6 +83,8 @@
           outline: none;
           margin-right: 16px;
           flex-grow: 1;
+          font-style: normal;
+          font-weight: bold;
         }
 
         .contact-form-submit {
@@ -95,6 +97,8 @@
           border-radius: 8px;
           border: 1px solid #0057FF;
           transition: 0.3s;
+          font-style: normal;
+          font-weight: bold;
 
           &:hover {
             background: #0035a0;
